@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "objcGrowingIO"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "GrowingIO SDK"
 
   # This description is used to generate tags and improve search results.
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/growingio/growingio-pods.git", :tag => "0.0.3" }
+  s.source       = { :git => "https://github.com/growingio/growingio-pods.git", :tag => "0.0.4" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -122,7 +122,7 @@ Pod::Spec.new do |s|
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
-  s.vendored_libraries = "libGrowing.a"
+  s.vendored_libraries = "objcGrowingIO/libGrowing.a"
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
