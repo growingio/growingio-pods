@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6D09C9ED1C7C0A410067B456 /* objcGrowingIO.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6D09C9EC1C7C0A410067B456 /* objcGrowingIO.h */; };
-		6D09C9EF1C7C0A410067B456 /* objcGrowingIO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D09C9EE1C7C0A410067B456 /* objcGrowingIO.m */; };
 		6D09C9F71C7C0A6A0067B456 /* libGrowing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D09C9F61C7C0A6A0067B456 /* libGrowing.a */; };
 /* End PBXBuildFile section */
 
@@ -19,7 +17,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				6D09C9ED1C7C0A410067B456 /* objcGrowingIO.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -27,8 +24,6 @@
 
 /* Begin PBXFileReference section */
 		6D09C9E91C7C0A410067B456 /* libobjcGrowingIO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libobjcGrowingIO.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D09C9EC1C7C0A410067B456 /* objcGrowingIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = objcGrowingIO.h; sourceTree = "<group>"; };
-		6D09C9EE1C7C0A410067B456 /* objcGrowingIO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = objcGrowingIO.m; sourceTree = "<group>"; };
 		6D09C9F51C7C0A6A0067B456 /* Growing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Growing.h; sourceTree = "<group>"; };
 		6D09C9F61C7C0A6A0067B456 /* libGrowing.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGrowing.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,8 +61,6 @@
 			children = (
 				6D09C9F51C7C0A6A0067B456 /* Growing.h */,
 				6D09C9F61C7C0A6A0067B456 /* libGrowing.a */,
-				6D09C9EC1C7C0A410067B456 /* objcGrowingIO.h */,
-				6D09C9EE1C7C0A410067B456 /* objcGrowingIO.m */,
 			);
 			path = objcGrowingIO;
 			sourceTree = "<group>";
@@ -128,7 +121,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D09C9EF1C7C0A410067B456 /* objcGrowingIO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +252,7 @@
 				6D09C9F41C7C0A410067B456 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
