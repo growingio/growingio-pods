@@ -1,0 +1,10 @@
+how to update new versions:
+1. copy new .h and .a files to $GitRoot/GrowingIO
+2. modify the version code in s.version and s.source
+3. commit all your changes
+4. git push
+5. create a new tag named as version code, e.g. "git tag 0.9.6"
+6. git push --tag
+7. done
+8. test to see if it works
+
