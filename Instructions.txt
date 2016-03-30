@@ -4,7 +4,7 @@ how to update new versions:
 3. commit all your changes
 4. git push
 5. create a new tag named as version code, e.g. "git tag 0.9.6"
-6. git push --tag
+6. git push --tags
 7. pod trunk push GrowingIO.podspec // you may need to `pod trunk register` first
 8. done
 9. test to see if it works
