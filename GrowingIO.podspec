@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.author             = { "Hao Che" => "chehao@growingio.com" }
   s.platform     = :ios, "7.0"
   s.ios.deployment_target = "7.0"
-  s.source       = { :git => "https://github.com/growingio/growingio-pods.git", :tag => "0.9.8.5" }
+  s.source       = { :git => "https://github.com/growingio/growingio-pods.git", :tag => "0.9.8.5a" }
   s.source_files  = "GrowingIO", "GrowingIO/*.h"
   s.preserve_paths = "GrowingIO/*.a"
   s.public_header_files = "GrowingIO/*.h"
