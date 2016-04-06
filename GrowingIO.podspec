@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.source_files  = "GrowingIO", "GrowingIO/*.h"
   s.preserve_paths = "GrowingIO/*.a"
   s.public_header_files = "GrowingIO/*.h"
-  s.frameworks = "Foundation", "Security"
+  s.frameworks = "Foundation", "Security", "CoreTelephony"
   s.libraries = "icucore", "sqlite3"
   s.vendored_libraries = "GrowingIO/libGrowing.a"
   s.requires_arc = true
