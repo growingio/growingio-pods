@@ -65,5 +65,25 @@
 @end
 
 
+// 该属性setter方法均使用 objc_setAssociatedObject实现
+// 如果是自定义的UIViewController建议优先使用重写getter方法来实现 以提高性能
+@interface UIViewController(GrowingAttributes)
+
+// 手动标识该页面的标题，必须在该UIViewController显示之前设置
+@property (nonatomic, copy)   NSString* growingAttributesPageName;
+
+// 手动标识该页面的相关属性，必须在该UIViewController显示之前设置
+// growingAttributesPageGroup如果为空，则不会发送PSn属性
+@property (nonatomic, copy)   NSString* growingAttributesPageGroup;
+@property (nonatomic, copy)   NSString* growingAttributesPS1;
+@property (nonatomic, copy)   NSString* growingAttributesPS2;
+@property (nonatomic, copy)   NSString* growingAttributesPS3;
+@property (nonatomic, copy)   NSString* growingAttributesPS4;
+@property (nonatomic, copy)   NSString* growingAttributesPS5;
+@property (nonatomic, copy)   NSString* growingAttributesPS6;
+
+@end
+
+
 
 
