@@ -9,6 +9,19 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, GrowingAspectMode)
+{
+    // 默认 类似KVO的机制进行数据采集
+    // 目前已知对RAC的rac_signalForSelector和Aspects以及部分不确定的手写swizzling有冲突
+    // 依据不同调用顺序 可能出现函数不被调用或者崩溃的问题
+    // 另外如果使用 object_getClass或者swfit的dynamicType属性会得到一个KVO的子类
+    // 如果用于取得XIB或者其他资源 可能会失效
+    GrowingAspectModeSubClass           ,
+    
+    // 测试阶段 高兼容性 性能比GrowingAspectTypeSubClass略低 但是比RAC和Aspects快8-10倍左右
+    GrowingAspectModeDynamicSwizzling   ,
+};
+
 
 @interface Growing : NSObject
 
@@ -29,9 +42,6 @@
 // 默认采样100%
 + (void)startWithAccountId:(NSString *)accountId;
 
-// 代码调出配置菜单
-+ (void)showGrowingMenu;
-
 // 命令行输入日志
 + (void)setEnableLog:(BOOL)enableLog;
 + (BOOL)getEnableLog;
@@ -48,6 +58,9 @@
 + (void)setCS9Value:(NSString*)value forKey:(NSString*)key;
 + (void)setCS10Value:(NSString*)value forKey:(NSString*)key;
 
+// 该函数请在main函数第一行调用 APP启动后 将不允许修改采集模式
++ (void)setAspectMode:(GrowingAspectMode)aspectMode;
++ (GrowingAspectMode)getAspectMode;
 
 @end
 
