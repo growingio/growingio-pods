@@ -62,7 +62,7 @@ typedef NS_ENUM(NSInteger, GrowingAspectMode)
 + (void)setAspectMode:(GrowingAspectMode)aspectMode;
 + (GrowingAspectMode)getAspectMode;
 
-// 是否允许发送诊断信息，默认为关
+// 是否允许发送基本性能诊断信息，默认为开
 + (void)setEnableDiagnose:(BOOL)enable;
 
 @end
