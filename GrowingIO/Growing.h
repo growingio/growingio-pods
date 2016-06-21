@@ -78,6 +78,9 @@ typedef NS_ENUM(NSInteger, GrowingAspectMode)
 // 手动标识该view的取值  比如banner广告条的id 可以放在banner按钮的任意view上
 @property (nonatomic, copy)   NSString* growingAttributesValue;
 
+// 手动标识该view的取值  该值可被子节点继承
+@property (nonatomic, copy)   NSString* growingAttributesValueInheritable;
+
 // 手动标识该view的tag
 // 这个tag必须是全局唯一的，在代码结构改变时也请保持不变
 // 这个tag最好是常量，不要包含流水id、SKU-id、商品名称等易变的信息
