@@ -65,6 +65,9 @@ typedef NS_ENUM(NSInteger, GrowingAspectMode)
 // 是否允许发送基本性能诊断信息，默认为开
 + (void)setEnableDiagnose:(BOOL)enable;
 
+// 手动发送统计信息，keyValuePairs中的key和value都只能是字符串
++ (void)trackEvent:(NSString *)eventName withValue:(NSDictionary *)keyValuePairs;
+
 @end
 
 
@@ -78,8 +81,8 @@ typedef NS_ENUM(NSInteger, GrowingAspectMode)
 // 手动标识该view的取值  比如banner广告条的id 可以放在banner按钮的任意view上
 @property (nonatomic, copy)   NSString* growingAttributesValue;
 
-// 手动标识该view的取值  该值可被子节点继承
-@property (nonatomic, copy)   NSString* growingAttributesValueInheritable;
+// 手动标识该view的附加属性  该值可被子节点继承
+@property (nonatomic, copy)   NSString* growingAttributesInfo;
 
 // 手动标识该view的tag
 // 这个tag必须是全局唯一的，在代码结构改变时也请保持不变
