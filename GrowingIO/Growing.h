@@ -68,6 +68,9 @@ typedef NS_ENUM(NSInteger, GrowingAspectMode)
 // 手动发送统计信息，keyValuePairs中的key和value都只能是字符串
 + (void)trackEvent:(NSString *)eventName withValue:(NSDictionary *)keyValuePairs;
 
+// 全局_不_发送任何统计信息
++ (void)disable;
+
 @end
 
 
