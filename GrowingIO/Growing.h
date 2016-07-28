@@ -65,8 +65,9 @@ typedef NS_ENUM(NSInteger, GrowingAspectMode)
 // 是否允许发送基本性能诊断信息，默认为开
 + (void)setEnableDiagnose:(BOOL)enable;
 
++ (void)trackEvent:(NSString *)eventName withValue:(NSDictionary *)keyValuePairs __deprecated_msg("请用下面的 track:properties: 方法");
 // 手动发送统计信息，keyValuePairs中的key和value都只能是字符串
-+ (void)trackEvent:(NSString *)eventName withValue:(NSDictionary *)keyValuePairs;
++ (void)track:(NSString *)eventName properties:(NSDictionary *)keyValuePairs;
 
 // 全局_不_发送任何统计信息
 + (void)disable;
