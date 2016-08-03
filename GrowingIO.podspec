@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "GrowingIO"
-  s.version      = "0.9.30"
+  s.version      = "0.9.31"
   s.summary      = "GrowingIO SDK"
   s.description  = <<-DESC
                    This Pod contains GrowingIO SDK. For more informations, please read http://help.growingio.com/ (in Chinese).
