@@ -8,12 +8,12 @@
 
 Pod::Spec.new do |s|
   s.name         = "GrowingIO"
-  s.version      = "0.9.34"
+  s.version      = "0.9.35"
   s.summary      = "GrowingIO SDK"
   s.description  = <<-DESC
                    This Pod contains GrowingIO SDK. For more informations, please read http://help.growingio.com/ (in Chinese).
                    DESC
-  s.homepage     = "https://github.com/growingio/growingio-pods.git/"
+  s.homepage     = "https://www.growingio.com/"
   s.license      = { :type => 'MIT', :text => <<-LICENSE
 Copyright (c) 2016 Hao Che <chehao@growingio.com>
 
@@ -40,14 +40,14 @@ THE SOFTWARE.
   s.platform     = :ios, "7.0"
   s.ios.deployment_target = "7.0"
 # s.source       = { :git => "https://github.com/growingio/growingio-pods.git", :tag => "#{s.version}" }
-  s.source       = { :http => "http://growing.ufile.ucloud.cn/sdk/GrowingIO-iOS-SDK.zip",
-                     :sha1 => "85c143888864def6ba800c9eb7bf9c90e805ed1c" }
-  s.source_files  = "Growing-0.9.34-20160830135233", "Growing-0.9.34-20160830135233/*.h"
-  s.preserve_paths = "Growing-0.9.34-20160830135233/*.a"
-  s.public_header_files = "Growing-0.9.34-20160830135233/*.h"
-  s.frameworks = "Foundation", "Security", "CoreTelephony", "SystemConfiguration"
+  s.source       = { :http => "http://growing.ufile.ucloud.cn/sdk/GrowingIO-iOS-SDK-0.9.35-20160901185929.zip",
+                     :sha1 => "7b090b11548c7954751eb4a1e84d4553b7784126" }
+  s.source_files  = "GrowingIO-iOS-SDK", "GrowingIO-iOS-SDK/*.h"
+  s.preserve_paths = "GrowingIO-iOS-SDK/*.a"
+  s.public_header_files = "GrowingIO-iOS-SDK/*.h"
+  s.frameworks = "Foundation", "Security", "CoreTelephony", "SystemConfiguration", "SafariServices"
   s.libraries = "icucore", "sqlite3"
-  s.vendored_libraries = "Growing-0.9.34-20160830135233/libGrowing.a"
+  s.vendored_libraries = "GrowingIO-iOS-SDK/libGrowing.a"
   s.requires_arc = true
   s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
 
