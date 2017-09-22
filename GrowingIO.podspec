@@ -7,14 +7,14 @@
 #
 
 Pod::Spec.new do |s|
-  s.name         = "GrowingIO"
-  s.version      = "1.0.3"
-  s.summary      = "GrowingIO SDK"
+  s.name         = 'GrowingIO'
+  s.version      = '1.1.0'
+  s.summary      = 'GrowingIO Tracking SDK'
   s.description  = <<-DESC
                    This Pod contains GrowingIO SDK. For more informations, please read http://help.growingio.com/ (in Chinese).
                    DESC
-  s.homepage     = "https://www.growingio.com/"
-  s.license      = { :type => 'MIT', :text => <<-LICENSE
+  s.homepage     = 'https://www.growingio.com/'
+  s.license      = { type: 'MIT', text: <<-LICENSE
 Copyright (c) 2016 Hao Che <chehao@growingio.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,19 +36,35 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
                        LICENSE
                    }
-  s.author       = { "xuyunzhao" => "xuyunzhao@growingio.com" }
-  s.platform     = :ios, "7.0"
-  s.ios.deployment_target = "7.0"
+  s.author       = { 'GrowingIO' => 'support@growingio.com' }
+  s.platform     = :ios, '8.0'
+  s.ios.deployment_target = '8.0'
 # s.source       = { :git => "https://github.com/growingio/growingio-pods.git", :tag => "#{s.version}" }
-  s.source       = { :http => "http://growing.cn-bj.ufileos.com/sdk/GrowingIO-iOS-SDK-1.0.3-20170707182821.zip",
-                     :sha1 => "382af90bc0dd14e0ba2402d153e9968414ae495c" }
-  s.source_files  = "GrowingIO-iOS-SDK", "GrowingIO-iOS-SDK/*.h"
-  s.preserve_paths = "GrowingIO-iOS-SDK/*.a"
-  s.public_header_files = "GrowingIO-iOS-SDK/*.h"
-  s.frameworks = "Foundation", "Security", "CoreTelephony", "SystemConfiguration", "CoreLocation"
-  s.libraries = "icucore", "sqlite3"
-  s.vendored_libraries = "GrowingIO-iOS-SDK/libGrowing.a"
+  s.source       = { http: 'http://assets.growingio.com/sdk/GrowingIO-iOS-SDK-1.1.0.zip',
+                     sha1: 'ed750c6715c20c1c5ddc581a0f4542512928ade9' }
   s.requires_arc = true
   s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
 
+  source_files =
+    'GrowingIO-iOS-SDK',
+    'GrowingIO-iOS-SDK/*.h'
+  s.default_subspec = 'Core'
+
+  s.subspec 'Core' do |core|
+    core.source_files = source_files
+    core.public_header_files = 'GrowingIO-iOS-SDK/*.h'
+    core.frameworks = 'Foundation', 'Security', 'CoreTelephony', 'SystemConfiguration', 'CoreLocation', 'AdSupport'
+    core.preserve_paths = 'GrowingIO-iOS-SDK/*.a'
+    core.libraries = 'icucore', 'sqlite3'
+    core.vendored_libraries = 'GrowingIO-iOS-SDK/libGrowing.a'
+  end
+
+  s.subspec 'without-IDFA' do |idfa|
+    idfa.source_files = source_files
+    idfa.public_header_files = 'GrowingIO-iOS-SDK/*.h'
+    idfa.frameworks = 'Foundation', 'Security', 'CoreTelephony', 'SystemConfiguration', 'CoreLocation'
+    idfa.preserve_paths = 'GrowingIO-iOS-SDK/*.a'
+    idfa.libraries = 'icucore', 'sqlite3'
+    idfa.vendored_libraries = 'GrowingIO-iOS-SDK/libGrowing.a'
+  end
 end
