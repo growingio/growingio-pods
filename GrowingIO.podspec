@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = 'GrowingIO'
-  s.version      = '1.4.1'
+  s.version      = '1.4.2'
   s.summary      = 'GrowingIO Tracking SDK'
   s.description  = <<-DESC
                    This Pod contains GrowingIO SDK. For more informations, please read http://help.growingio.com/ (in Chinese).
@@ -40,8 +40,8 @@ THE SOFTWARE.
   s.platform     = :ios, '7.0'
   s.ios.deployment_target = '7.0'
 # s.source       = { :git => "https://github.com/growingio/growingio-pods.git", :tag => "#{s.version}" }
-  s.source       = { http: 'https://assets.growingio.com/sdk/GrowingIO-iOS-SDK-1.4.1.zip',
-                     sha1: '71381e083aad59d0902666f53cd54e61b1531b93' }
+  s.source       = { http: 'https://assets.growingio.com/sdk/GrowingIO-iOS-SDK-1.4.2.zip',
+                     sha1: 'cc6a2f499ba33f724c189b9bbd128a58aa6b4649' }
   s.requires_arc = true
   s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
 
